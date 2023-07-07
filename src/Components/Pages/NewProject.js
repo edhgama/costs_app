@@ -7,7 +7,7 @@ export default function NewProject(){
     <div className={styles.new_project_container}>
       <h1>Criar Projeto</h1>
       <p>Crie seu projeto para adicionar serviços.</p>
-      <ProjectForm />
+      <ProjectForm btnText='Criar Projeto' />
     </div>
   )
 
