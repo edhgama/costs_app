@@ -1,18 +1,29 @@
 {
-  "projects": [],
-  "categories": 
-  [
+  "projects": [
     {
-      "id":1,
-      "name":"infra"
+      "name": "abxacsd",
+      "budget": "1122",
+      "category": {
+        "id": "2",
+        "name": "dev"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "infra"
     },
     {
-      "id":2 ,
-      "name":"dev"
+      "id": 2,
+      "name": "dev"
     },
     {
-      "id":3,
-      "name":"design"
+      "id": 3,
+      "name": "design"
     }
   ]
 }
