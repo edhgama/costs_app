@@ -10,6 +10,39 @@
       "costs": 0,
       "services": [],
       "id": 1
+    },
+    {
+      "name": "123",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "budget": "222",
+      "costs": 0,
+      "services": [],
+      "id": 2
+    },
+    {
+      "name": "testeparallel",
+      "budget": "20000",
+      "category": {
+        "id": "1",
+        "name": "infra"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 3
+    },
+    {
+      "name": "dev",
+      "budget": "122",
+      "category": {
+        "id": "3",
+        "name": "design"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 4
     }
   ],
   "categories": [
