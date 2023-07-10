@@ -1,4 +1,5 @@
 import { useLocation } from 'react-router-dom'
+import Loading from '../Layout/Loading'
 import LinkButton from '../Layout/LinkButton'
 import Container from '../Layout/Container'
 import ProjectCard from '../Projects/ProjectCard'
@@ -10,6 +11,7 @@ import { useState, useEffect } from 'react'
 export default function Projects() {
 
   const [projects, setProjects] = useState([])
+  const [removeLoading, setRemoveLoading] = useState(false)
 
   const location = useLocation()
   let message = '';
@@ -18,8 +20,8 @@ export default function Projects() {
   }
 
   useEffect(() => {
-
-    fetch("http://localhost:5000/projects", {
+    setTimeout(() => {
+      fetch("http://localhost:5000/projects", {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
@@ -29,9 +31,10 @@ export default function Projects() {
       .then((data) => {
         // console.log(data)
         setProjects(data)
+        setRemoveLoading(true)
       })
       .catch((err) => console.log(err))
-
+    }, 100)
 
   }, [])
 
@@ -45,18 +48,20 @@ export default function Projects() {
       </div>
       {message && <Message msg={message} type={'sucess'} />}
       <Container customClass="start">
-        {
-          projects.length > 0 &&
+        {projects.length > 0 &&
           projects.map((project) => (
             <ProjectCard name={project.name}
               id={project.id}
               budget={project.budget}
               category={project.category}
               handleRemove={project.handleRemove}
-              key={project.id} 
+              key={project.id}
             />
-          ))
-        }
+          ))}
+        {!removeLoading && <Loading /> }
+        {removeLoading && projects.length === 0 && (
+          <p>Não há projetos cadastrados!</p>
+        )}
       </Container>
     </div>
   )
