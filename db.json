@@ -65,6 +65,17 @@
       "costs": 0,
       "services": [],
       "id": 6
+    },
+    {
+      "name": "asbcsdccc",
+      "budget": "2222222",
+      "category": {
+        "id": "2",
+        "name": "dev"
+      },
+      "costs": 0,
+      "services": [],
+      "id": 7
     }
   ],
   "categories": [
