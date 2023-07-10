@@ -11,7 +11,10 @@
   color: #ffbb33;
   padding: .4rem;
   margin-bottom: 1.3rem;
+}
 
+.project_card p{
+  margin-top: 0.2rem;
 }
 
 .project_card p span{
@@ -21,6 +24,10 @@
 .category_text {
   display: flex;
   align-items: center;
+  font-size: 0.9rem;
+  padding-top:0.2rem;
+  padding: 0 0.3rem;
+  background-color: #DDDDDD;
 }
 
 .category_text span {
@@ -31,7 +38,7 @@
   border-radius: 50%;
   margin-right: 0.5rem;
   background-color: #7a7a7a;
-  border: 2px #444 solid;
+  border:1px solid #555555; 
 }
 
 .category_text .infra{
@@ -39,7 +46,7 @@
 
 }
 .category_text .dev{
-  background-color: #a0e7e5;
+  background-color: #a077e5;
   
 }
 
@@ -52,6 +59,7 @@
   margin-top: 1.2rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 
 .project_card_actions a,
@@ -61,7 +69,7 @@
   background-color: #FFF;
   color:#000;
   font-size: 0.9rem;
-  padding: 0.6rem 1rem;
+  padding: 0.3rem 1rem;
   cursor: pointer;
   border: 1px solid #222;
   display: flex;
@@ -79,3 +87,4 @@
  background-color: #444;
  color:#ffcc77;
 }
+ 
