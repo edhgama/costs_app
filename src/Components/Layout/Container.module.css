@@ -1,5 +1,6 @@
 .container{
-  width:90vw;
+  width:90%; 
+  /*90vw deixa uma borda branca na direita por elementos inline e espaços/newline */
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
