@@ -13,6 +13,7 @@ export default function Project() {
   const [showProjectForm, setShowProjectForm] = useState(false)
   const [message, setMessage] = useState()
   const [msgType, setMsgType] = useState()
+  const [msgCount, setMessageCount] = useState(0)
 
 
   useEffect(() => {
@@ -35,6 +36,8 @@ export default function Project() {
     if(project.budget < project.costs){
       setMessage('Orçamento maior que custo limite!')
       setMsgType('error')
+      setMessageCount(msgCount + 1)
+      console.log(msgCount)
       return false
     }
     
@@ -47,11 +50,12 @@ export default function Project() {
     })
     .then(resp => resp.json())
     .then((data) => {
-      console.log(data)
+      // console.log(data)
       setProject(data)
       setShowProjectForm(false)
       setMessage(`Projeto Atualizado`)
       setMsgType('sucess')
+      setMessageCount(msgCount + 1)
       }
     )
     .catch(err => console.log(err))
@@ -67,7 +71,7 @@ export default function Project() {
       {project.name ?
         (<div className={styles.project_details }>
           <Container customClass="column">
-            {message && <Message type={msgType} msg={message} />}
+            {message && <Message type={msgType} msg={message} key={msgCount}  />}
             <div className={styles.details_container}>
               <h1>Projeto: {project.name}</h1>
               <button className={styles.btn} onClick={toggleProjectForm}>

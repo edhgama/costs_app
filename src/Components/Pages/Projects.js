@@ -1,4 +1,4 @@
-import { useLocation, useHistory } from 'react-router-dom'
+import { useLocation } from 'react-router-dom'
 import Loading from '../Layout/Loading'
 import LinkButton from '../Layout/LinkButton'
 import Container from '../Layout/Container'
@@ -13,6 +13,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([])
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectMessage] = useState('')
+  const [msgCount, setMessageCount] = useState(0)
 
   const location = useLocation()
   let message = '';
@@ -51,9 +52,8 @@ export default function Projects() {
         setProjects(projects.filter(project => project.id !== id))
         // messageDeletedId = id;
         setProjectMessage('Projeto removido com sucesso!')
-        setTimeout(() =>
-          setProjectMessage('')
-          , 3100)
+        setMessageCount(msgCount + 1)
+        console.log(msgCount)
       })
       .catch((err) => console.log(err))
 
@@ -67,7 +67,7 @@ export default function Projects() {
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
       {message && <Message msg={message} type={'sucess'} />}
-      {projectMessage && <Message msg={projectMessage} type={'sucess'} />}
+      {projectMessage && <Message msg={projectMessage} type={'sucess'} key={msgCount} />}
 
       <Container customClass="start">
         {projects.length > 0 &&
