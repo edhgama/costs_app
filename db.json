@@ -67,8 +67,8 @@
       "id": 10
     },
     {
-      "name": "hist",
-      "budget": "20",
+      "name": "hist23",
+      "budget": "2022",
       "category": {
         "id": "1",
         "name": "infra"
