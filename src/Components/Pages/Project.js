@@ -121,7 +121,31 @@ export default function Project() {
 
   }
 
-  function removeService(service) {
+  function removeService(id, cost) {
+    setMessage()
+    const servicesUpdated = project.services.filter(
+      (service) => service.id !== id
+    )
+
+    const projectUpdated = project
+    projectUpdated.services = servicesUpdated
+    projectUpdated.cost = parseFloat(projectUpdated.cost) - parseFloat(cost)
+
+    fetch(`http://localhost:5000/projects/${projectUpdated.id}`, {
+      method: 'PATCH',
+      headers: {
+        "content-type": "application/json"
+      },
+      bod: JSON.stringify(projectUpdated)
+    })
+      .then((resp) => resp.json())
+      .then((data) => {
+        setProject(projectUpdated)
+        setservices(servicesUpdated)
+        setMsgType('sucess')
+        setMessage('Serviço Removido com sucesso')
+      })
+      .catch()
 
   }
 
@@ -167,13 +191,13 @@ export default function Project() {
             <Container customClass="start">
               {services.length > 0 &&
                 services.map((service) => (
-                    <ServiceCard
-                      id={service.id}
-                      name={service.name}
-                      cost={service.cost}
-                      description={service.description}
-                      key={service.id}
-                      handleRemove={removeService} />
+                  <ServiceCard
+                    id={service.id}
+                    name={service.name}
+                    cost={service.cost}
+                    description={service.description}
+                    key={service.id}
+                    handleRemove={removeService} />
                 ))
               }
               {services.length === 0 &&

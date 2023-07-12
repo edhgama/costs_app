@@ -55,31 +55,13 @@
         "id": "3",
         "name": "design"
       },
-      "cost": 1446,
+      "cost": 2000,
       "services": [
         {
-          "name": "11",
-          "cost": "11",
-          "description": "111",
-          "id": "f01aece1-ff8c-4ca2-91d4-bbde28f1f3a7"
-        },
-        {
-          "name": "222",
-          "cost": "222",
-          "description": "aaaaa",
-          "id": "137aee43-2c3b-4bcf-a518-488f67cb3848"
-        },
-        {
-          "name": "1",
-          "cost": "1",
-          "description": "1",
-          "id": "deda5f00-e7bd-4319-898b-eb749aab38ca"
-        },
-        {
-          "name": "devdds",
-          "cost": "1212",
-          "description": "lorem ipsum ipsum loremno selo irim nocum",
-          "id": "bbfec4df-430e-49f2-ba97-cd054372d846"
+          "name": "o QA demitido do mark",
+          "cost": "2000",
+          "description": "quem sabe testa ao vivo",
+          "id": "3d4d9d75-2627-451d-b8f4-439a1d6828c4"
         }
       ],
       "id": 3
