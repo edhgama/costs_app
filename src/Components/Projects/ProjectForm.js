@@ -31,7 +31,7 @@ export default function ProjectForm({ btnText, handleSubmit, projectData }) {
   const submit = (e) => {
     e.preventDefault();
     //console.log(project)
-     handleSubmit(project); // do pai createPost(project)
+    handleSubmit(project); // do pai createPost(project)
   }
 
   function handleChange(e) {
@@ -65,16 +65,18 @@ export default function ProjectForm({ btnText, handleSubmit, projectData }) {
         text="Orçamento do projeto"
         name="budget"
         handleOnChange={handleChange}
-        placeholder="Insira Valor do Projeto" 
-        value={project.budget? project.budget : ''} />
+        placeholder="Insira Valor do Projeto"
+        value={project.budget ? project.budget : ''} />
       <Select
         name="category_id"
         text="Selecione uma Categoria"
         handleOnChange={handleCategory}
         options={categories}
-        value={project.category? project.category.id : ` `}
+        value={project.category ? project.category.id : 'Categorias'}
+      //aqui quando volta pro select ele conta como valor
       />
-      <SubmitButton text={btnText} />
+      {project.category && <SubmitButton text={btnText} />}
+      {/* <SubmitButton text={btnText}/> */}
     </form>
   )
 }

@@ -13,7 +13,7 @@ export default function Projects() {
   const [projects, setProjects] = useState([])
   const [removeLoading, setRemoveLoading] = useState(false)
   const [projectMessage, setProjectMessage] = useState('')
-  const [msgCount, setMessageCount] = useState(0)
+  // const [msgCount, setMessageCount] = useState(0)
 
   const location = useLocation()
   let message = '';
@@ -31,7 +31,6 @@ export default function Projects() {
       })
         .then((resp) => resp.json())
         .then((data) => {
-          // console.log(data)
           setProjects(data)
           setRemoveLoading(true)
         })
@@ -41,6 +40,8 @@ export default function Projects() {
   }, [])
 
   function removeProject(id) {
+    setProjectMessage()
+    
     fetch(`http://localhost:5000/projects/${id}`, {
       method: "delete",
       headers: {
@@ -49,14 +50,14 @@ export default function Projects() {
     })
       .then((resp) => resp.json())
       .then((data) => {
+        
         setProjects(projects.filter(project => project.id !== id))
-        // messageDeletedId = id;
         setProjectMessage('Projeto removido com sucesso!')
-        setMessageCount(msgCount + 1)
-        console.log(msgCount)
+        // setMessageCount(msgCount + 1) 
       })
       .catch((err) => console.log(err))
 
+    //setProjectMessage() //funciona mas é ideal?
   }
 
 
@@ -67,7 +68,7 @@ export default function Projects() {
         <LinkButton to="/newproject" text="Criar Projeto" />
       </div>
       {message && <Message msg={message} type={'sucess'} />}
-      {projectMessage && <Message msg={projectMessage} type={'sucess'} key={msgCount} />}
+      {projectMessage && <Message msg={projectMessage} type={'sucess'} />} {/* key={msgCount} /> */}
 
       <Container customClass="start">
         {projects.length > 0 &&

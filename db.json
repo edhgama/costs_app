@@ -1,92 +1,99 @@
 {
   "projects": [
     {
-      "name": "testeparallel",
-      "budget": "20000",
+      "name": "ddv",
+      "budget": "111",
       "category": {
-        "id": "1",
-        "name": "infra"
+        "id": "2",
+        "name": "dev"
       },
-      "costs": 0,
-      "services": [],
+      "cost": 12,
+      "services": [
+        {
+          "name": "12",
+          "cost": "12",
+          "description": "12",
+          "id": "4ceb518b-674f-45b3-91ed-dd82543202d6"
+        }
+      ],
+      "id": 1
+    },
+    {
+      "name": "123",
+      "budget": "123",
+      "category": {
+        "id": "3",
+        "name": "design"
+      },
+      "cost": 26,
+      "services": [
+        {
+          "name": "11",
+          "cost": "11",
+          "description": "11",
+          "id": "02e2d101-440a-4d0d-b820-d685e985efc2"
+        },
+        {
+          "name": "12",
+          "cost": "12",
+          "description": "12",
+          "id": "9688f86a-c15f-4735-8852-2564fbaf2fbf"
+        },
+        {
+          "name": "3",
+          "cost": "3",
+          "description": "3",
+          "id": "7ebcf420-671f-4407-b45d-76f56ff7e830"
+        }
+      ],
+      "id": 2
+    },
+    {
+      "name": "333",
+      "budget": "3333",
+      "category": {
+        "id": "3",
+        "name": "design"
+      },
+      "cost": 1446,
+      "services": [
+        {
+          "name": "11",
+          "cost": "11",
+          "description": "111",
+          "id": "f01aece1-ff8c-4ca2-91d4-bbde28f1f3a7"
+        },
+        {
+          "name": "222",
+          "cost": "222",
+          "description": "aaaaa",
+          "id": "137aee43-2c3b-4bcf-a518-488f67cb3848"
+        },
+        {
+          "name": "1",
+          "cost": "1",
+          "description": "1",
+          "id": "deda5f00-e7bd-4319-898b-eb749aab38ca"
+        },
+        {
+          "name": "devdds",
+          "cost": "1212",
+          "description": "lorem ipsum ipsum loremno selo irim nocum",
+          "id": "bbfec4df-430e-49f2-ba97-cd054372d846"
+        }
+      ],
       "id": 3
     },
     {
-      "name": "dev",
-      "budget": "122",
+      "name": "4444",
+      "budget": "4",
       "category": {
-        "id": "3",
-        "name": "design"
+        "id": "2",
+        "name": "dev"
       },
-      "costs": 0,
+      "cost": 0,
       "services": [],
       "id": 4
-    },
-    {
-      "name": "Projetao SUcesso COm C",
-      "budget": "2300111",
-      "category": {
-        "id": "3",
-        "name": "design"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 5
-    },
-    {
-      "name": "Basec121 2",
-      "budget": "222",
-      "category": {
-        "id": "3",
-        "name": "design"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 8
-    },
-    {
-      "name": "devdffct",
-      "budget": "11.23",
-      "category": {
-        "id": "2",
-        "name": "dev"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 9
-    },
-    {
-      "name": "redev",
-      "budget": "123.22",
-      "category": {
-        "id": "2",
-        "name": "dev"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 10
-    },
-    {
-      "name": "hist tt22",
-      "budget": "22",
-      "category": {
-        "id": "1",
-        "name": "infra"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 11
-    },
-    {
-      "name": "sVcsdd d",
-      "budget": "22",
-      "category": {
-        "id": "1",
-        "name": "infra"
-      },
-      "costs": 0,
-      "services": [],
-      "id": 12
     }
   ],
   "categories": [

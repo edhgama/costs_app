@@ -88,3 +88,7 @@
  color:#ffcc77;
 }
  
+.project_card_actions button:active{
+  background-color: #ddd;
+  color: #333;
+}

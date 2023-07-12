@@ -9,7 +9,8 @@ export default function Select({ text, name, options, handleOnChange, value }) {
         id={name}
         onChange={handleOnChange}
         value={value || ''}>
-        <option>Selecione opção</option>
+        <option disable selected hidden >Selecione opção</option>
+        {/*aqui pra evitar problemas no valor do select*/}
         {
           options.map((option) => (
             <option value={option.id} key={option.id}>

@@ -8,7 +8,7 @@ export default function NewProject(){
   const history = useHistory()
 
   function createPost(project){
-    project.costs = 0;
+    project.cost  = 0;
     project.services = []
 
     fetch("http://localhost:5000/projects",
@@ -17,10 +17,9 @@ export default function NewProject(){
       headers: {
         "Content-type":"application/json"
       },
-      body: JSON.stringify(project), //post precisa de um body :B
+      body: JSON.stringify(project) , //post precisa de um body :B e um failsafe
     }).then((resp) => resp.json())
     .then((data) => {
-      console.log(data)
       history.push('/projects', {message: `Projeto criado com sucesso`})
     })
     .catch(err => console.log(err)) 
