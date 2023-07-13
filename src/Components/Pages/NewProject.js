@@ -1,11 +1,11 @@
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 import ProjectForm from '../Projects/ProjectForm'
 import styles from './NewProject.module.css'
 
 export default function NewProject(){
 
-  const history = useHistory()
+  const navigate = useNavigate()
 
   function createPost(project){
     project.cost  = 0;
@@ -20,7 +20,7 @@ export default function NewProject(){
       body: JSON.stringify(project) , //post precisa de um body :B e um failsafe
     }).then((resp) => resp.json())
     .then((data) => {
-      history.push('/projects', {message: `Projeto criado com sucesso`})
+      navigate('/projects', {state:{message: `Projeto criado com sucesso`}})
     })
     .catch(err => console.log(err)) 
   }
